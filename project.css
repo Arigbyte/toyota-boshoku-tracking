@@ -1,0 +1,1938 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  overflow-x: hidden;
+
+  background: #c8edff;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+  width: 100%;
+
+  height: 88px;
+
+  background: #ffffff;
+
+  position: relative;
+
+  z-index: 100;
+}
+
+/* HEADER INNER */
+
+.header-inner {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 183px;
+
+  padding-right: 184px;
+}
+
+/* ==================================================
+   TBINA LOGO
+================================================== */
+
+.header-logo {
+  display: flex;
+
+  align-items: center;
+
+  width: 170px;
+
+  text-decoration: none;
+}
+
+.header-logo img {
+  width: 170px;
+
+  height: auto;
+
+  display: block;
+}
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.navigation {
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 44px;
+}
+
+.navigation a {
+  text-decoration: none;
+
+  color: #000;
+
+  font-size: 17px;
+
+  font-weight: 1000;
+
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.navigation a:hover {
+  color: #003d88;
+}
+
+.navigation .nav-home {
+  font-weight: 1000;
+}
+
+/* ==================================================
+   HEADER RIGHT
+================================================== */
+
+.header-right {
+  display: flex;
+
+  align-items: center;
+
+  margin-left: 42px;
+
+  gap: 50px;
+}
+
+/* ==================================================
+   LOGIN
+================================================== */
+
+.login-button {
+  width: 164px;
+
+  height: 41px;
+
+  border-radius: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #000;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  box-shadow: 0 5px 12px rgba(0, 61, 130, 0.25);
+}
+
+/* ==================================================
+   LANGUAGE
+================================================== */
+
+.language {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #000;
+
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+.globe {
+  width: 21px;
+
+  height: 21px;
+
+  border: 2px solid #000;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+.lang-arrow {
+  font-size: 17px;
+
+  margin-left: 2px;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  width: 100%;
+
+  height: 690px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 38%,
+      rgba(255, 61, 81, 0.28) 0%,
+      rgba(255, 61, 81, 0) 32%
+    ),
+    radial-gradient(
+      circle at 13% 72%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 28%
+    ),
+    linear-gradient(110deg, #92000b 0%, #c90013 45%, #f20b20 100%);
+}
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.hero-content {
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  z-index: 20;
+}
+
+/* ==================================================
+   TOYOTA BOSHOKU LOGO
+================================================== */
+
+.hero-logo {
+  position: absolute;
+
+  top: -7px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 300px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  z-index: 20;
+}
+
+/* ==================================================
+   TRUCK
+================================================== */
+
+.truck {
+  position: absolute;
+
+  width: 430px;
+
+  height: auto;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  top: 120px;
+
+  object-fit: contain;
+
+  z-index: 15;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.hero h1 {
+  position: absolute;
+
+  top: 387px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 1100px;
+
+  max-width: 90%;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 48px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  letter-spacing: -1.2px;
+
+  z-index: 20;
+}
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.hero p {
+  position: absolute;
+
+  top: 515px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 1100px;
+
+  max-width: 90%;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  line-height: 1.65;
+
+  font-weight: 400;
+
+  letter-spacing: -0.3px;
+
+  z-index: 20;
+}
+
+/* ==================================================
+   CTA BUTTON
+================================================== */
+
+.hero-button {
+  position: absolute;
+
+  top: 616px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 790px;
+
+  height: 56px;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #000;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.3px;
+
+  box-shadow:
+    0 4px 9px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+
+  z-index: 30;
+}
+
+/* ==================================================
+   CIRCLES
+================================================== */
+
+.circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(255, 255, 255, 0.22);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* LEFT CIRCLE */
+
+.circle-left {
+  width: 600px;
+
+  height: 600px;
+
+  left: -245px;
+
+  bottom: -355px;
+
+  transform: rotate(-25deg);
+}
+
+/* RIGHT CIRCLE */
+
+.circle-right {
+  width: 730px;
+
+  height: 730px;
+
+  right: -190px;
+
+  top: -340px;
+
+  transform: rotate(-22deg);
+}
+
+/* CENTER CIRCLE */
+
+.circle-center {
+  width: 520px;
+
+  height: 300px;
+
+  left: 50%;
+
+  top: 115px;
+
+  transform: translateX(-50%) rotate(-8deg);
+
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ==================================================
+   TRACKING LINES
+================================================== */
+
+.tracking-line {
+  position: absolute;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+
+  transform-origin: center;
+
+  z-index: 4;
+}
+
+/* LEFT */
+
+.tracking-left {
+  width: 360px;
+
+  left: -20px;
+
+  top: 455px;
+
+  transform: rotate(25deg);
+}
+
+/* RIGHT */
+
+.tracking-right {
+  width: 390px;
+
+  right: -40px;
+
+  top: 500px;
+
+  transform: rotate(28deg);
+}
+
+/* ==================================================
+   POINTS
+================================================== */
+
+.point {
+  position: absolute;
+
+  width: 29px;
+
+  height: 29px;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(255, 255, 255, 0.85);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.1);
+
+  z-index: 8;
+}
+
+.point span {
+  position: absolute;
+
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* LEFT POINT */
+
+.point-left {
+  left: 14%;
+
+  top: 65%;
+}
+
+/* RIGHT POINT */
+
+.point-right {
+  right: 21%;
+
+  top: 39%;
+}
+
+/* BOTTOM POINT */
+
+.point-bottom {
+  right: 16%;
+
+  top: 66%;
+}
+
+/* ==================================================
+   DOT PATTERN
+================================================== */
+
+.dots {
+  position: absolute;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 4px);
+
+  gap: 12px;
+
+  z-index: 3;
+}
+
+.dots span {
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* LEFT DOTS */
+
+.dots-left {
+  left: 42px;
+
+  bottom: 34px;
+}
+
+/* RIGHT DOTS */
+
+.dots-right {
+  right: 83px;
+
+  top: 65px;
+}
+
+/* ==================================================
+   BOTTOM SECTION
+================================================== */
+
+.bottom-section {
+  width: 100%;
+
+  height: 110px;
+
+  background: linear-gradient(180deg, #bde8fc 0%, #ccefff 100%);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1400px) {
+  .header-inner {
+    padding-left: 80px;
+
+    padding-right: 80px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero p {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-inner {
+    padding-left: 35px;
+
+    padding-right: 35px;
+  }
+
+  .navigation {
+    gap: 20px;
+  }
+
+  .header-right {
+    margin-left: 25px;
+
+    gap: 20px;
+  }
+
+  .login-button {
+    width: 135px;
+  }
+
+  .hero-logo {
+    width: 170px;
+  }
+
+  .truck {
+    width: 320px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    width: 700px;
+
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    height: 75px;
+  }
+
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .header-logo {
+    width: 140px;
+  }
+
+  .header-logo img {
+    width: 140px;
+  }
+
+  .navigation,
+  .header-right {
+    display: none;
+  }
+
+  .hero {
+    height: 720px;
+  }
+
+  .hero-logo {
+    width: 150px;
+
+    top: 25px;
+  }
+
+  .truck {
+    width: 290px;
+
+    top: 150px;
+  }
+
+  .hero h1 {
+    top: 355px;
+
+    font-size: 29px;
+
+    line-height: 1.3;
+  }
+
+  .hero p {
+    top: 465px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .hero-button {
+    top: 590px;
+
+    width: 90%;
+
+    height: 55px;
+
+    font-size: 15px;
+
+    text-align: center;
+  }
+
+  .circle-right {
+    right: -350px;
+  }
+
+  .circle-left {
+    left: -350px;
+  }
+}
+
+/* ==========================================
+   TENTANG KAMI
+=========================================== */
+
+.about-section {
+  width: 100%;
+
+  padding: 90px 10% 100px;
+
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.8fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.section-label {
+  color: #d50016;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.about-content h2 {
+  margin-top: 12px;
+
+  margin-bottom: 25px;
+
+  color: #12345b;
+
+  font-size: 42px;
+
+  line-height: 1.2;
+}
+
+.about-content p {
+  color: #555555;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.about-card {
+  padding: 45px 35px;
+
+  border-radius: 25px;
+
+  background: linear-gradient(145deg, #a90012, #ef1026);
+
+  color: white;
+
+  box-shadow: 0 15px 40px rgba(130, 0, 20, 0.2);
+}
+
+.about-icon {
+  width: 65px;
+
+  height: 65px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+.about-card h3 {
+  font-size: 25px;
+
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  color: rgba(255, 255, 255, 0.9);
+
+  line-height: 1.7;
+}
+
+/* ==========================================
+   FEATURE CARDS
+=========================================== */
+
+.features {
+  max-width: 1200px;
+
+  margin: 80px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 35px;
+
+  background: #f7f9fc;
+
+  border-radius: 18px;
+
+  border: 1px solid #edf0f5;
+
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.feature-number {
+  color: #d50016;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  color: #12345b;
+
+  font-size: 21px;
+
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #666;
+
+  line-height: 1.7;
+}
+
+/* =====================================================
+   CONTACT SECTION
+   ===================================================== */
+
+.contact-section {
+  width: 100%;
+  padding: 60px 0;
+  background: #f4f9fd;
+  box-sizing: border-box;
+}
+
+/* CONTAINER UTAMA */
+.contact-wrapper {
+  width: 1250px !important;
+  max-width: calc(100% - 80px) !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: grid !important;
+
+  /* KIRI = MAPS | KANAN = FORM */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+
+  column-gap: 35px !important;
+
+  align-items: start !important;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   KOLOM KIRI
+   ===================================================== */
+
+.contact-left {
+  width: 100% !important;
+  min-width: 0 !important;
+
+  background: #fff;
+  border-radius: 12px;
+
+  padding: 20px !important;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   KOLOM KANAN - KIRIM PESAN
+   ===================================================== */
+
+.contact-right {
+  width: 100% !important;
+  min-width: 0 !important;
+
+  background: #fff;
+  border-radius: 12px;
+
+  padding: 20px !important;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   CONTACT ITEM
+   ===================================================== */
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+/* ICON */
+
+.icon {
+  width: 36px;
+  height: 36px;
+
+  background: #d32f2f;
+  color: #fff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* LABEL */
+
+.label {
+  display: block;
+
+  font-size: 12px;
+
+  color: #666;
+
+  margin-bottom: 3px;
+}
+
+/* =====================================================
+   MAPS
+   ===================================================== */
+
+.maps-card {
+  width: 100% !important;
+
+  margin-top: 8px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #eee;
+
+  background: #fff;
+
+  box-sizing: border-box;
+}
+
+.maps-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  font-weight: 600;
+
+  box-sizing: border-box;
+}
+
+.maps-btn {
+  background: #000;
+
+  color: #fff;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+/* GOOGLE MAPS IFRAME */
+
+.maps-card iframe {
+  display: block;
+
+  width: 100% !important;
+
+  height: 250px !important;
+
+  border: 0;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   FORM KIRIM PESAN
+   ===================================================== */
+
+.contact-right h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.contact-right form {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.contact-right form input,
+.contact-right form textarea {
+  display: block;
+
+  width: 100% !important;
+
+  padding: 12px;
+
+  margin: 0 0 12px 0;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+}
+
+.contact-right form input {
+  height: 42px;
+}
+
+.contact-right form textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+.contact-right form button {
+  display: block;
+
+  width: 100% !important;
+
+  padding: 14px;
+
+  background: #1a4b8c;
+
+  color: #fff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   PARENT FLEX
+   ===================================================== */
+
+.parent-flex {
+  display: flex;
+
+  gap: 24px;
+
+  align-items: flex-start;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    width: 100% !important;
+
+    max-width: calc(100% - 30px) !important;
+
+    grid-template-columns: 1fr !important;
+
+    row-gap: 25px;
+  }
+}
+
+/* ==========================================
+   LANGUAGE SELECTOR
+   ========================================== */
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+/* TOMBOL BAHASA */
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+  border: none;
+
+  padding: 8px 10px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  color: #111;
+}
+
+/* MENU */
+
+.language-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  right: 0;
+
+  width: 170px;
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  padding: 6px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  display: none;
+
+  z-index: 9999;
+}
+
+/* SAAT DIBUKA */
+
+.language-menu.show {
+  display: block;
+}
+
+/* PILIHAN BAHASA */
+
+.language-menu button {
+  display: block;
+
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 7px;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+/* HOVER */
+
+.language-menu button:hover {
+  background: #f2f2f2;
+}
+/* ==========================================
+   LANGUAGE MENU
+   ========================================== */
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 210px;
+
+  background: #fff;
+
+  border-radius: 14px;
+
+  padding: 10px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  display: none;
+
+  z-index: 9999;
+}
+
+/* MENU AKTIF */
+
+.language-menu.show {
+  display: block;
+}
+
+/* SETIAP BAHASA */
+
+.language-menu button {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 38px 38px 1fr;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 10px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  color: #111;
+}
+
+/* EFEK SAAT MOUSE DI ATAS */
+
+.language-menu button:hover {
+  background: #f4f4f4;
+}
+
+/* BENDERA */
+
+.language-menu .flag {
+  font-size: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* KODE ID / TH / JP */
+
+.language-menu .lang-code {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #111;
+}
+
+/* NAMA NEGARA */
+
+.language-menu .lang-name {
+  font-size: 16px;
+
+  color: #222;
+}
+.flag-img {
+  width: 52px;
+  height: 34px;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+
+  border: 1px solid #ddd;
+
+  display: block;
+}
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-button {
+  border: none;
+  cursor: pointer;
+
+  background: #000;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+
+  width: 180px;
+  height: 48px;
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   LOGIN OVERLAY - FULL BACKGROUND
+========================================= */
+
+.login-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  /* FOTO PT MENJADI BACKGROUND PENUH */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("CompanyProfile-2409101125-5.webp");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  /* MEMBERIKAN KESAN DEPTH */
+  perspective: 900px;
+}
+
+/* =========================================
+   LOGIN CONTAINER
+========================================= */
+
+.login-container {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: transparent;
+
+  padding: 50px;
+
+  box-sizing: border-box;
+
+  transform-style: preserve-3d;
+}
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.login-close {
+  position: fixed;
+
+  top: 25px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 32px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 100000;
+
+  transition: 0.2s ease;
+}
+
+.login-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   BAGIAN KIRI
+========================================= */
+
+.login-left {
+  width: 480px;
+  min-height: 630px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 34px 36px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  transform: perspective(1200px) rotateY(0deg) translateZ(20px);
+
+  transition: transform 0.4s ease;
+}
+
+.login-left:hover {
+  transform: perspective(1200px) rotateY(0deg) translateZ(35px) translateY(-5px);
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.login-content {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* =========================================
+   JUDUL
+========================================= */
+
+.login-content h1 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+}
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.login-subtitle {
+  margin-top: 20px;
+  margin-left: 0;
+
+  color: #f2f2f2;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+
+  margin-top: 28px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+/* =========================================
+   SOCIAL BUTTON
+========================================= */
+
+.social-login {
+  width: 100%;
+
+  height: 42px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2b2b2b;
+
+  color: #fff;
+
+  font-size: 15px;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  transition: 0.2s ease;
+}
+
+.social-login:hover {
+  background: #353535;
+}
+
+/* GOOGLE */
+
+.google-icon {
+  color: #4285f4;
+
+  font-weight: 700;
+
+  font-size: 21px;
+}
+
+/* APPLE */
+
+.apple-icon {
+  color: white;
+
+  font-size: 18px;
+}
+
+/* =========================================
+   OR
+========================================= */
+
+.login-or {
+  color: #ddd;
+
+  text-align: center;
+
+  font-size: 16px;
+
+  margin: 17px 0;
+}
+
+/* =========================================
+   EMAIL INPUT
+========================================= */
+
+#loginEmail {
+  width: 100%;
+
+  height: 46px;
+
+  box-sizing: border-box;
+
+  padding: 0 16px;
+
+  border-radius: 10px;
+
+  border: 1px solid #444;
+
+  background: #1f1f1f;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+#loginEmail::placeholder {
+  color: #999;
+}
+
+#loginEmail:focus {
+  border-color: #777;
+}
+
+/* =========================================
+   CONTINUE EMAIL
+========================================= */
+
+.continue-email {
+  width: 100%;
+
+  height: 46px;
+
+  margin-top: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #111;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.continue-email:hover {
+  background: #e8e8e8;
+}
+
+/* =========================================
+   PRIVACY
+========================================= */
+
+.privacy-text {
+  color: #777;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin-top: 18px;
+}
+
+.privacy-text a {
+  color: #4da3ff;
+
+  text-decoration: underline;
+}
+
+/* =========================================
+   DOWNLOAD APP
+========================================= */
+
+.download-app {
+  display: block;
+
+  margin: 30px auto 0;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #2c2c2c;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.download-app span {
+  margin-right: 8px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-right {
+    display: none;
+  }
+
+  .login-left {
+    padding: 80px 25px;
+  }
+
+  .login-content h1 {
+    color: #fff;
+
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  }
+  .login-subtitle {
+    color: #fff;
+
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  }
+  .login-form {
+    width: 100%;
+  }
+}
+/* =========================================
+   ANIMASI TOMBOL MASUK
+========================================= */
+
+.login-button {
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Saat tombol ditekan */
+.login-button.login-clicked {
+    transform: scale(0.94);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   ANIMASI LOGIN OVERLAY
+========================================= */
+
+.login-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+
+/* Login dibuka */
+.login-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* =========================================
+   LOGIN CONTAINER
+========================================= */
+
+.login-container {
+    width: 480px;
+    height: 630px;
+
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    transform: translateY(25px) scale(0.94);
+    opacity: 0;
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.4s ease;
+
+    border-radius: 24px;
+
+    overflow: visible;
+}
+
+
+/* Saat login dibuka */
+.login-overlay.active .login-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+
+/* Posisi akhir */
+.login-overlay.active .login-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}

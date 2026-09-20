@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Toyota Boshoku Tracking</title>
+
+    <link rel="stylesheet" href="project.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="header">
+      <div class="header-inner">
+        <!-- LOGO TBINA -->
+        <a href="#" class="header-logo">
+          <img src="images.jpg" alt="TBINA" />
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+      <a href="#home" data-i18n="home">Home</a>
+
+<a href="#tentang" data-i18n="about">Tentang</a>
+
+<a href="#kontak" data-i18n="contact">Kontak</a>
+        </nav>
+        <!-- RIGHT HEADER -->
+        <div class="header-right">
+<button
+    class="login-button"
+    id="openLogin"
+    data-i18n="login">
+    Masuk
+</button>
+
+        <div class="language-selector">
+
+    <button class="language-btn" id="languageBtn">
+        <span>◎</span>
+        <span id="currentLanguage">ID</span>
+        <span>⌄</span>
+    </button>
+
+    <div class="language-menu" id="languageMenu">
+
+        <button data-lang="id">
+            🇮🇩 Indonesia
+        </button>
+
+        <button data-lang="th">
+            🇹🇭 Thailand
+        </button>
+
+        <button data-lang="ja">
+            🇯🇵 Japan
+        </button>
+
+       </div>
+      </div>
+      </div>
+    </header>
+
+    <!-- ==========================================
+         HERO
+    =========================================== -->
+
+    <main>
+      <section class="hero" id="home">
+        <!-- ==================================
+                 BACKGROUND DECORATION
+            =================================== -->
+
+        <div class="circle circle-left"></div>
+
+        <div class="circle circle-right"></div>
+
+        <div class="circle circle-center"></div>
+
+        <!-- LEFT TRACKING LINE -->
+
+        <div class="tracking-line tracking-left"></div>
+
+        <!-- RIGHT TRACKING LINE -->
+
+        <div class="tracking-line tracking-right"></div>
+
+        <!-- ==================================
+                 GLOWING POINTS
+            =================================== -->
+
+        <div class="point point-left">
+          <span></span>
+        </div>
+
+        <div class="point point-right">
+          <span></span>
+        </div>
+
+        <div class="point point-bottom">
+          <span></span>
+        </div>
+
+        <!-- ==================================
+                 DOT PATTERN
+            =================================== -->
+
+        <div class="dots dots-left">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="dots dots-right">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- ==================================
+                 HERO CONTENT
+            =================================== -->
+
+        <div class="hero-content">
+          <!-- LOGO TOYOTA BOSHOKU -->
+
+          <img
+            src="c:\Users\arigs\Downloads\ChatGPT Image Sep 19, 2026, 06_03_51 PM.png"
+            class="hero-logo"
+            alt="Toyota Boshoku"
+          />
+
+          <!-- TRUCK -->
+
+          <img
+            src="c:\Users\arigs\Downloads\ChatGPT Image Sep 19, 2026, 04_13_42 PM.png"
+            class="truck"
+            alt="Truck"
+          />
+
+          <!-- TITLE -->
+
+       <h1 data-i18n="heroTitle">
+    Setiap Perjalanan Terdata<br>
+    Lebih Mudah Pantau Armada
+</h1>
+
+<p data-i18n="heroDescription">
+    Pengambilan keputusan lebih cepat dan akurat
+    berdasarkan beragam laporan perjalanan yang mudah diakses.
+</p>
+
+          <!-- BUTTON -->
+
+          <a
+    href="#"
+    class="hero-button"
+    data-i18n="heroButton">
+
+    Support Kustomisasi Laporan Sesuai Kebutuhan
+
+</a>
+        </div>
+      </section>
+
+      <!-- ==========================================
+     TENTANG KAMI
+=========================================== -->
+
+      <section class="about-section" id="tentang">
+        <div class="about-container">
+          <div class="about-content">
+            <span class="section-label"> </span>
+
+            <h2>Toyota Boshoku Tracking</h2>
+
+    <p data-i18n="aboutDescription1">
+    Toyota Boshoku Tracking merupakan sistem yang membantu perusahaan
+    dalam memantau perjalanan dan aktivitas armada secara lebih mudah,
+    cepat, dan terdata.
+</p>
+
+<p data-i18n="aboutDescription2">
+    Dengan informasi perjalanan yang tersusun secara teratur, pengguna
+    dapat memperoleh informasi kendaraan dan perjalanan untuk membantu
+    proses pemantauan operasional.
+</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">TBINA</div>
+
+    <h3 data-i18n="monitoringTitle">
+    Monitoring Armada
+</h3>
+
+<p data-i18n="monitoringDescription">
+    Pantau aktivitas armada dan perjalanan kendaraan melalui sistem
+    tracking yang mudah digunakan.
+</p>
+          </div>
+        </div>
+
+        <!-- KEUNGGULAN -->
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-number">01</div>
+
+    <h3 data-i18n="feature1Title">
+    Data Terpusat
+</h3>
+
+<p data-i18n="feature1Description">
+    Informasi perjalanan tersimpan secara terstruktur sehingga lebih
+    mudah diakses.
+</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">02</div>
+
+    <h3 data-i18n="feature2Title">
+    Monitoring Armada
+</h3>
+
+<p data-i18n="feature2Description">
+    Membantu memantau aktivitas kendaraan dalam satu sistem yang
+    terintegrasi.
+</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">03</div>
+
+    <h3 data-i18n="feature3Title">
+    Laporan Perjalanan
+</h3>
+
+<p data-i18n="feature3Description">
+    Data perjalanan dapat digunakan untuk membantu kebutuhan laporan
+    operasional.
+</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="kontak">
+        <div class="contact-wrapper">
+          <!-- =========================
+             KOLOM KIRI
+             ========================= -->
+          <div class="contact-left">
+           <h2 data-i18n="contactTitle">
+    Hubungi Kami
+</h2>
+
+<p data-i18n="contactDescription">
+    Memiliki pertanyaan mengenai Toyota Boshoku Tracking?
+    Silakan hubungi kami melalui informasi kontak berikut.
+</p>
+
+            <!-- TELEPON -->
+            <div class="contact-item">
+              <div class="icon">📞</div>
+
+              <div>
+                <span class="label" data-i18n="phone">
+    Telepon
+</span>
+                <strong>(021) 8981273</strong>
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="contact-item">
+              <div class="icon">@</div>
+
+              <div>
+                <span class="label" data-i18n="email">
+    Email
+</span>
+                <strong>info@tbina.co.id</strong>
+              </div>
+            </div>
+
+            <!-- =========================
+                 GOOGLE MAPS
+                 ========================= -->
+            <div class="maps-card">
+              <div class="maps-header">
+                <span data-i18n="locationTitle">
+    Lokasi PT Toyota Boshoku Indonesia
+</span>
+
+<a
+    href="https://www.google.com/maps/search/?api=1&query=PT+Toyota+Boshoku+Indonesia+Kawasan+Industri+MM2100+Cibitung+Bekasi"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="maps-btn"
+    data-i18n="openMaps">
+    Buka di Maps
+</a>
+              </div>
+
+ <iframe
+    src="https://www.google.com/maps?q=PT+Toyota+Boshoku+Indonesia,+Kawasan+Industri+MM2100,+Cibitung,+Bekasi&output=embed"
+    width="100%"
+    height="300"
+    style="border: 0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+            </div>
+
+            <!-- =========================
+                 ALAMAT
+                 ========================= -->
+            <div class="contact-item address">
+              <div class="icon">📍</div>
+
+              <div>
+             <span class="label" data-i18n="address">
+    Alamat
+</span>
+
+    <strong data-i18n="addressText">
+    Kawasan Industri MM2100, Cibitung / Cikarang Barat, Bekasi,
+    Jawa Barat.
+</strong>
+              </div>
+            </div>
+          </div>
+          <!-- ↑ HANYA INI yang menutup contact-left -->
+
+          <!-- =========================
+             KOLOM KANAN
+             ========================= -->
+          <div class="contact-right">
+            <h2 data-i18n="sendMessage">
+    Kirim Pesan
+</h2>
+
+            <form>
+       <input
+    type="text"
+    placeholder="Nama"
+    data-i18n-placeholder="name">
+
+<input
+    type="email"
+    placeholder="Email"
+    data-i18n-placeholder="email">
+
+<input
+    type="tel"
+    placeholder="Nomor Telepon"
+    data-i18n-placeholder="phoneNumber">
+
+<textarea
+    placeholder="Pesan"
+    rows="5"
+    data-i18n-placeholder="message">
+</textarea>
+
+<button
+    type="submit"
+    data-i18n="sendButton">
+    Kirim Pesan
+</button>
+            </form>
+          </div>
+          <!-- ↑ contact-right -->
+        </div>
+        <!-- ↑ contact-wrapper -->
+      </section>
+    </main>
+
+    <!-- ==============================
+     LOGIN OVERLAY
+================================ -->
+
+<div class="login-overlay" id="loginOverlay">
+
+    <div class="login-container">
+
+        <!-- TOMBOL CLOSE -->
+        <button class="login-close" id="closeLogin">
+            ×
+        </button>
+
+        <!-- =========================
+             BAGIAN KIRI
+        ========================== -->
+
+        <div class="login-left">
+
+            <div class="login-content">
+
+                <h1>
+                    Toyota Boshoku Tracking
+                </h1>
+
+                <p class="login-subtitle">
+                    Your thinking partner for big ambitions
+                </p>
+
+                <div class="login-form">
+
+                    <!-- GOOGLE -->
+                    <button class="social-login google-login">
+                        <span class="google-icon">G</span>
+                        Continue with Google
+                    </button>
+
+                    <!-- APPLE -->
+                    <button class="social-login apple-login">
+                        <span class="apple-icon">●</span>
+                        Continue with Apple
+                    </button>
+
+                    <div class="login-or">
+                        OR
+                    </div>
+
+                    <!-- EMAIL -->
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                    >
+
+                    <!-- BUTTON -->
+                    <button
+                        class="continue-email"
+                        id="continueEmail"
+                    >
+                        Continue with email
+                    </button>
+
+                    <p class="privacy-text">
+                        By continuing, you acknowledge
+                        <a href="#">
+                            Privacy Policy
+                        </a>.
+                    </p>
+
+                </div>
+
+                <!-- DOWNLOAD -->
+                <button class="download-app">
+                    <span>⊞</span>
+                    Download desktop app
+                </button>
+
+            </div>
+
+        </div>
+
+</div>
+
+<script src="projectlanguage.js"></script>
+<script src="projectlogin.js"></script>
+
+  </body>
+</html>
