@@ -1448,7 +1448,7 @@ body {
   /* FOTO PT MENJADI BACKGROUND PENUH */
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("CompanyProfile-2409101125-5.webp");
+    url("ChatGPT\ Image\ Sep\ 20\,\ 2026\,\ 10_41_44\ PM.png");
 
   background-size: cover;
 
@@ -1465,25 +1465,35 @@ body {
 ========================================= */
 
 .login-container {
-  position: relative;
+    width: 420px;
+    height: auto;
 
-  width: 100%;
-  min-height: 100vh;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
 
-  display: flex;
+    margin: 0;
 
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  justify-content: center;
+    position: relative;
 
-  background: transparent;
+    background: transparent;
 
-  padding: 50px;
+    box-sizing: border-box;
 
-  box-sizing: border-box;
+    transform-style: preserve-3d;
 
-  transform-style: preserve-3d;
+    transform: translateY(25px) scale(0.94);
+
+    opacity: 0;
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.4s ease;
 }
+
 /* =========================================
    CLOSE BUTTON
 ========================================= */
@@ -1524,18 +1534,20 @@ body {
 }
 
 /* =========================================
-   BAGIAN KIRI
+   KOTAK LOGIN UTAMA
 ========================================= */
 
 .login-left {
-  width: 480px;
-  min-height: 630px;
+  width: 420px;
+  height: auto;
+  min-height: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 34px 36px;
+  padding: 28px;
+
   box-sizing: border-box;
 
   background: rgba(255, 255, 255, 0.12);
@@ -1554,6 +1566,14 @@ body {
   transform: perspective(1200px) rotateY(0deg) translateZ(20px);
 
   transition: transform 0.4s ease;
+}
+
+.login-left:hover {
+  transform: perspective(1200px) rotateY(0deg) translateZ(30px) translateY(-3px);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .login-left:hover {
@@ -1611,9 +1631,9 @@ body {
 .login-form {
   width: 100%;
 
-  margin-top: 28px;
+  margin-top: 25px;
 
-  padding: 20px;
+  padding: 22px;
 
   box-sizing: border-box;
 
@@ -1631,61 +1651,74 @@ body {
     inset 0 1px 1px rgba(255, 255, 255, 0.12);
 }
 /* =========================================
-   SOCIAL BUTTON
+   SOCIAL LOGIN
 ========================================= */
 
 .social-login {
   width: 100%;
+  height: 56px;
 
-  height: 42px;
-
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
   border: none;
+  border-radius: 12px;
 
-  border-radius: 10px;
-
-  background: #2b2b2b;
-
+  background: #292929;
   color: #fff;
 
-  font-size: 15px;
-
   font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
 
   cursor: pointer;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  gap: 10px;
+  gap: 12px;
 
-  transition: 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .social-login:hover {
-  background: #353535;
+  background: #333;
 }
+
+.social-login:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================
+   ICON GOOGLE & APPLE
+========================================= */
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
 
 /* GOOGLE */
 
-.google-icon {
-  color: #4285f4;
-
-  font-weight: 700;
-
-  font-size: 21px;
+.google-login .social-icon {
+  width: 24px;
+  height: 24px;
 }
+
 
 /* APPLE */
 
-.apple-icon {
-  color: white;
-
-  font-size: 18px;
+.apple-login .social-icon {
+  width: 26px;
+  height: 26px;
 }
 
 /* =========================================
@@ -1793,36 +1826,6 @@ body {
 }
 
 /* =========================================
-   DOWNLOAD APP
-========================================= */
-
-.download-app {
-  display: block;
-
-  margin: 30px auto 0;
-
-  padding: 12px 20px;
-
-  border: none;
-
-  border-radius: 12px;
-
-  background: #2c2c2c;
-
-  color: white;
-
-  font-family: inherit;
-
-  font-size: 16px;
-
-  cursor: pointer;
-}
-
-.download-app span {
-  margin-right: 8px;
-}
-
-/* =========================================
    RESPONSIVE
 ========================================= */
 
@@ -1858,38 +1861,36 @@ body {
 ========================================= */
 
 .login-button {
-    transition: 
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* Saat tombol ditekan */
 .login-button.login-clicked {
-    transform: scale(0.94);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(0.94);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
 
 /* =========================================
    ANIMASI LOGIN OVERLAY
 ========================================= */
 
 .login-overlay {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
-    transition:
-        opacity 0.4s ease,
-        visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
-
 
 /* Login dibuka */
 .login-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* =========================================
@@ -1897,42 +1898,60 @@ body {
 ========================================= */
 
 .login-container {
-    width: 480px;
-    height: 630px;
+  width: 680px;
+  height: 730px;
 
-    max-width: calc(100vw - 40px);
-    max-height: calc(100vh - 40px);
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
 
-    margin: auto;
+  margin: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    position: relative;
+  position: relative;
 
-    transform: translateY(25px) scale(0.94);
-    opacity: 0;
+  transform: translateY(25px) scale(0.94);
+  opacity: 0;
 
-    transition:
-        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.4s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
 
-    border-radius: 24px;
+  border-radius: 24px;
 
-    overflow: visible;
+  overflow: visible;
 }
-
 
 /* Saat login dibuka */
 .login-overlay.active .login-container {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+  transform: translateY(0) scale(1);
+  opacity: 1;
 }
-
 
 /* Posisi akhir */
 .login-overlay.active .login-container {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* =========================================
+   LOGO TOYOTA BOSHOKU TRACKING
+========================================= */
+
+.login-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.login-logo img {
+    width: 360px;
+    max-width: 95%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
