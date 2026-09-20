@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pilih Role - Toyota Boshoku Tracking</title>
+
+    <style>
+      /* =========================================
+           RESET
+        ========================================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* =========================================
+           BODY
+        ========================================= */
+
+      body {
+        min-height: 100vh;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        background: linear-gradient(135deg, #8f0000, #e00000, #f3f4f6);
+
+        padding: 30px;
+      }
+
+      /* =========================================
+           BACKGROUND CIRCLE
+        ========================================= */
+
+      body::before {
+        content: "";
+
+        position: fixed;
+
+        width: 450px;
+
+        height: 450px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        top: -180px;
+
+        right: -100px;
+
+        pointer-events: none;
+      }
+
+      body::after {
+        content: "";
+
+        position: fixed;
+
+        width: 350px;
+
+        height: 350px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.06);
+
+        bottom: -160px;
+
+        left: -100px;
+
+        pointer-events: none;
+      }
+
+      /* =========================================
+           CARD
+        ========================================= */
+
+      .role-container {
+        width: 100%;
+
+        max-width: 850px;
+
+        padding: 45px;
+
+        background: rgba(255, 255, 255, 0.96);
+
+        border-radius: 28px;
+
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+
+        text-align: center;
+
+        position: relative;
+
+        z-index: 2;
+      }
+
+      /* =========================================
+           LOGO
+        ========================================= */
+
+      .logo {
+        width: 75px;
+
+        height: 75px;
+
+        margin: 0 auto 20px;
+
+        border-radius: 18px;
+
+        background: #d90000;
+
+        color: white;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 28px;
+
+        font-weight: 900;
+
+        box-shadow: 0 10px 25px rgba(217, 0, 0, 0.25);
+      }
+
+      /* =========================================
+           TITLE
+        ========================================= */
+
+      h1 {
+        font-size: 32px;
+
+        color: #181818;
+
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: #777;
+
+        font-size: 15px;
+
+        margin-bottom: 35px;
+
+        line-height: 1.6;
+      }
+
+      /* =========================================
+           USER
+        ========================================= */
+
+      .logged-user {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 9px 15px;
+
+        background: #f5f5f5;
+
+        border-radius: 30px;
+
+        margin-bottom: 35px;
+      }
+
+      .user-avatar {
+        width: 32px;
+
+        height: 32px;
+
+        border-radius: 50%;
+
+        background: #d90000;
+
+        color: white;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 13px;
+
+        font-weight: bold;
+      }
+
+      .user-email {
+        font-size: 13px;
+
+        color: #555;
+      }
+
+      /* =========================================
+           ROLE CARDS
+        ========================================= */
+
+      .roles {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+      }
+
+      .role-card {
+        border: 2px solid #eeeeee;
+
+        border-radius: 22px;
+
+        padding: 35px 25px;
+
+        background: white;
+
+        cursor: pointer;
+
+        text-align: center;
+
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .role-card:hover {
+        transform: translateY(-7px);
+
+        border-color: #d90000;
+
+        box-shadow: 0 15px 35px rgba(217, 0, 0, 0.15);
+      }
+
+      /* =========================================
+           ROLE ICON
+        ========================================= */
+
+      .role-icon {
+        width: 85px;
+
+        height: 85px;
+
+        margin: 0 auto 20px;
+
+        border-radius: 22px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 42px;
+
+        background: #fff0f0;
+      }
+
+      .role-card h2 {
+        font-size: 22px;
+
+        margin-bottom: 10px;
+
+        color: #222;
+      }
+
+      .role-card p {
+        color: #777;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        min-height: 45px;
+      }
+
+      /* =========================================
+           BUTTON
+        ========================================= */
+
+      .select-btn {
+        width: 100%;
+
+        margin-top: 25px;
+
+        height: 48px;
+
+        border: none;
+
+        border-radius: 10px;
+
+        background: #111;
+
+        color: white;
+
+        font-size: 14px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: 0.2s;
+      }
+
+      .role-card:hover .select-btn {
+        background: #d90000;
+      }
+
+      /* =========================================
+           FOOTER
+        ========================================= */
+
+      .footer {
+        margin-top: 30px;
+
+        color: #999;
+
+        font-size: 12px;
+      }
+
+      /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+      @media (max-width: 650px) {
+        body {
+          padding: 15px;
+        }
+
+        .role-container {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+
+        .roles {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="role-container">
+      <!-- LOGO -->
+
+      <div class="logo">TB</div>
+
+      <!-- TITLE -->
+
+      <h1>Pilih Jenis Pengguna</h1>
+
+      <p class="subtitle">
+        Silakan pilih peran Anda untuk melanjutkan ke Toyota Boshoku Tracking.
+      </p>
+
+      <!-- USER -->
+
+      <div class="logged-user">
+        <div class="user-avatar" id="userAvatar">A</div>
+
+        <span class="user-email" id="userEmail"> Memuat... </span>
+      </div>
+
+      <!-- ROLE -->
+
+      <div class="roles">
+        <!-- DRIVER -->
+
+        <div class="role-card" id="driverRole">
+          <div class="role-icon">🚚</div>
+
+          <h2>Driver</h2>
+
+          <p>
+            Untuk pengemudi yang ingin melihat dan memperbarui perjalanan
+            armada.
+          </p>
+
+          <button class="select-btn">Masuk sebagai Driver</button>
+        </div>
+
+        <!-- PENGGUNA -->
+
+        <div class="role-card" id="userRole">
+          <div class="role-icon">👤</div>
+
+          <h2>Pengguna</h2>
+
+          <p>
+            Untuk pengguna yang ingin memantau perjalanan dan melihat informasi
+            armada.
+          </p>
+
+          <button class="select-btn">Masuk sebagai Pengguna</button>
+        </div>
+      </div>
+
+      <div class="footer">Toyota Boshoku Indonesia Tracking</div>
+    </div>
+
+    <script>
+      /* =========================================
+           AMBIL USER GOOGLE
+        ========================================= */
+
+      const googleUser = localStorage.getItem("googleUser");
+
+      const loginEmail = localStorage.getItem("loginEmail");
+
+      let userEmail = "";
+
+      let userName = "User";
+
+      /* =========================================
+           GOOGLE USER
+        ========================================= */
+
+      if (googleUser) {
+        try {
+          const user = JSON.parse(googleUser);
+
+          userName = user.name || "User";
+
+          userEmail = user.email || "";
+        } catch (error) {
+          console.error("Data Google tidak valid:", error);
+        }
+      } else if (loginEmail) {
+
+      /* =========================================
+           EMAIL USER
+        ========================================= */
+        userEmail = loginEmail;
+
+        userName = loginEmail.split("@")[0];
+      }
+
+      /* =========================================
+           CEK LOGIN
+        ========================================= */
+
+      if (!userEmail) {
+        window.location.href = "project.html";
+      }
+
+      /* =========================================
+           TAMPILKAN USER
+        ========================================= */
+
+      document.getElementById("userEmail").textContent =
+        userName + " • " + userEmail;
+
+      document.getElementById("userAvatar").textContent = userName
+        .charAt(0)
+        .toUpperCase();
+
+      /* =========================================
+           DRIVER
+        ========================================= */
+
+      document
+        .getElementById("driverRole")
+        .addEventListener("click", function () {
+          localStorage.setItem("userRole", "driver");
+
+          window.location.href = "projecthalaman3.html";
+        });
+
+      /* =========================================
+           PENGGUNA
+        ========================================= */
+
+      document
+        .getElementById("userRole")
+        .addEventListener("click", function () {
+          localStorage.setItem("userRole", "pengguna");
+
+          window.location.href = "projecthalaman3pengguna.html";
+        });
+    </script>
+  </body>
+</html>

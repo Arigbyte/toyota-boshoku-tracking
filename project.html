@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
   </head>
 
   <body>
@@ -178,7 +179,7 @@
           <!-- LOGO TOYOTA BOSHOKU -->
 
           <img
-            src="c:\Users\arigs\Downloads\ChatGPT Image Sep 19, 2026, 06_03_51 PM.png"
+            src="ChatGPT Image Sep 19, 2026, 06_03_51 PM.png"
             class="hero-logo"
             alt="Toyota Boshoku"
           />
@@ -186,7 +187,7 @@
           <!-- TRUCK -->
 
           <img
-            src="c:\Users\arigs\Downloads\ChatGPT Image Sep 19, 2026, 04_13_42 PM.png"
+            src="ChatGPT Image Sep 19, 2026, 04_13_42 PM.png"
             class="truck"
             alt="Truck"
           />
@@ -451,18 +452,24 @@
             <div class="login-content">
 
                 <div class="login-logo">
-    <img src="c:\Users\arigs\Downloads\ChatGPT Image Sep 19, 2026, 06_03_51 PM.png" alt="Toyota Boshoku Tracking">
+    <img src="ChatGPT Image Sep 19, 2026, 06_03_51 PM.png">
 </div>
 
                 <div class="login-form">
 
-                   <button class="social-login google-login">
-    <img src="c:\Users\arigs\Downloads\ChatGPT Image Sep 20, 2026, 10_07_49 PM.png" alt="Google" class="social-icon">
+   <button type="button"
+        class="social-login google-login"
+        id="googleLoginBtn">
+
+    <img src="ChatGPT Image Sep 20, 2026, 10_07_49 PM.png"
+         alt="Google"
+         class="social-icon">
+
     <span>Continue with Google</span>
 </button>
 
 <button class="social-login apple-login">
-    <img src="c:\Users\arigs\Downloads\ChatGPT Image Sep 20, 2026, 10_38_43 PM.png" alt="Apple" class="social-icon">
+    <img src="ChatGPT Image Sep 20, 2026, 10_38_43 PM.png" alt="Apple" class="social-icon">
     <span>Continue with Apple</span>
 </button>
 
@@ -478,12 +485,11 @@
                     >
 
                     <!-- BUTTON -->
-                    <button
-                        class="continue-email"
-                        id="continueEmail"
-                    >
-                        Continue with email
-                    </button>
+                   <button
+    type="button"
+    id="continueEmailBtn">
+    Continue with email
+</button>
 
                     <p class="privacy-text">
                         By continuing, you acknowledge
