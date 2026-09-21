@@ -430,79 +430,205 @@
       </section>
     </main>
 
-    <!-- ==============================
+ <!-- =========================================
      LOGIN OVERLAY
-================================ -->
+========================================= -->
 
 <div class="login-overlay" id="loginOverlay">
 
     <div class="login-container">
 
         <!-- TOMBOL CLOSE -->
-        <button class="login-close" id="closeLogin">
+        <button
+            type="button"
+            class="login-close"
+            id="closeLogin">
             ×
         </button>
 
-        <!-- =========================
-             BAGIAN KIRI
-        ========================== -->
 
+        <!-- BAGIAN LOGIN -->
         <div class="login-left">
 
             <div class="login-content">
 
                 <div class="login-logo">
-    <img src="ChatGPT Image Sep 19, 2026, 06_03_51 PM.png">
-</div>
+                    <img
+                        src="ChatGPT Image Sep 19, 2026, 06_03_51 PM.png"
+                        alt="Toyota Boshoku">
+                </div>
+
 
                 <div class="login-form">
 
-   <button type="button"
-        class="social-login google-login"
-        id="googleLoginBtn">
+                    <!-- GOOGLE -->
+                    <button
+                        type="button"
+                        class="social-login google-login"
+                        id="googleLoginBtn">
 
-    <img src="ChatGPT Image Sep 20, 2026, 10_07_49 PM.png"
-         alt="Google"
-         class="social-icon">
+                        <img
+                            src="ChatGPT Image Sep 20, 2026, 10_07_49 PM.png"
+                            alt="Google"
+                            class="social-icon">
 
-    <span>Continue with Google</span>
-</button>
+                        <span>
+                            Continue with Google
+                        </span>
 
-<button class="social-login apple-login">
-    <img src="ChatGPT Image Sep 20, 2026, 10_38_43 PM.png" alt="Apple" class="social-icon">
-    <span>Continue with Apple</span>
-</button>
+                    </button>
 
+
+                    <!-- APPLE -->
+                    <button
+                        type="button"
+                        class="social-login apple-login">
+
+                        <img
+                            src="ChatGPT Image Sep 20, 2026, 10_38_43 PM.png"
+                            alt="Apple"
+                            class="social-icon">
+
+                        <span>
+                            Continue with Apple
+                        </span>
+
+                    </button>
+
+
+                    <!-- OR -->
                     <div class="login-or">
                         OR
                     </div>
+
 
                     <!-- EMAIL -->
                     <input
                         type="email"
                         id="loginEmail"
-                        placeholder="Enter your email"
-                    >
+                        placeholder="Enter your email">
 
-                    <!-- BUTTON -->
-                   <button
-    type="button"
-    id="continueEmailBtn">
-    Continue with email
-</button>
 
+                    <!-- CONTINUE EMAIL -->
+                    <button
+                        type="button"
+                        id="continueEmailBtn">
+                        Continue with email
+                    </button>
+
+
+                    <!-- PRIVACY -->
                     <p class="privacy-text">
+
                         By continuing, you acknowledge
+
                         <a href="#">
                             Privacy Policy
                         </a>.
+
                     </p>
 
                 </div>
 
+            </div>
+
         </div>
 
+    </div>
+
 </div>
+
+
+<!-- =========================================
+     OTP OVERLAY
+========================================= -->
+
+<div
+    class="otp-overlay"
+    id="otpOverlay">
+
+    <div class="otp-box">
+
+        <!-- CLOSE OTP -->
+        <button
+            type="button"
+            class="otp-close"
+            id="closeOtp">
+            ×
+        </button>
+
+
+        <!-- LOGO -->
+        <div class="otp-logo">
+
+            <img
+                src="ChatGPT Image Sep 19, 2026, 06_03_51 PM.png"
+                alt="Toyota Boshoku">
+
+        </div>
+
+
+        <!-- TITLE -->
+        <h2>
+            Verifikasi Email
+        </h2>
+
+
+        <!-- DESCRIPTION -->
+        <p class="otp-description">
+            Kami telah mengirim kode OTP 6 digit ke:
+        </p>
+
+
+        <!-- EMAIL -->
+        <strong id="otpEmail"></strong>
+
+
+        <!-- OTP INPUT -->
+        <input
+            type="text"
+            id="otpInput"
+            maxlength="6"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            placeholder="000000">
+
+
+        <!-- VERIFY -->
+        <button
+            type="button"
+            id="verifyOtpBtn">
+            Verifikasi OTP
+        </button>
+
+
+        <!-- MESSAGE -->
+        <p id="otpMessage"></p>
+
+
+        <!-- RESEND -->
+        <button
+            type="button"
+            id="resendOtpBtn"
+            class="resend-otp">
+            Kirim ulang kode
+        </button>
+
+    </div>
+
+</div>
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+    const SUPABASE_URL = "https://efcomnaudlbuterxannr.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_qf_B0qPYdbHRGuq2Qot6wg_TXv0nHSR";
+
+    const supabaseClient = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+    );
+</script>
 
 <script src="projectlanguage.js"></script>
 <script src="projectlogin.js"></script>

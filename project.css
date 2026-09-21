@@ -1988,3 +1988,363 @@ body {
     background: #f0f0f0 !important;
     transform: translateY(-1px);
 }
+.logo-tb {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 15px;
+}
+
+.logo-tb img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+/* =========================================
+   OTP OVERLAY
+========================================= */
+
+.otp-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    z-index: 99999;
+}
+
+
+/* OTP AKTIF */
+
+.otp-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   OTP BOX
+========================================= */
+
+.otp-box {
+    position: relative;
+
+    width: 420px;
+    max-width: calc(100% - 40px);
+
+    padding: 40px 35px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    transform:
+        translateY(30px)
+        scale(0.92);
+
+    opacity: 0;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* BOX SAAT AKTIF */
+
+.otp-overlay.active .otp-box {
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   TOMBOL CLOSE
+========================================= */
+
+.otp-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    color: #555;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.otp-close:hover {
+    color: #d71920;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   LOGO OTP
+========================================= */
+
+.otp-logo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.otp-logo img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   JUDUL
+========================================= */
+
+.otp-box h2 {
+    margin: 0 0 10px;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+
+/* =========================================
+   DESKRIPSI
+========================================= */
+
+.otp-description {
+    margin: 0 0 8px;
+
+    font-size: 14px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* EMAIL
+========================================= */
+
+#otpEmail {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #d71920;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   INPUT OTP
+========================================= */
+
+#otpInput {
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    color: #222;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#otpInput:focus {
+    border-color: #d71920;
+
+    box-shadow:
+        0 0 0 4px rgba(215, 25, 32, 0.12);
+}
+
+
+/* =========================================
+   TOMBOL VERIFIKASI
+========================================= */
+
+#verifyOtpBtn {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #d71920;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+#verifyOtpBtn:hover {
+    background: #b9141b;
+
+    transform: translateY(-2px);
+}
+
+#verifyOtpBtn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================
+   PESAN OTP
+========================================= */
+
+#otpMessage {
+    min-height: 22px;
+
+    margin: 15px 0 8px;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   KIRIM ULANG
+========================================= */
+
+.resend-otp {
+    border: none;
+
+    background: transparent;
+
+    color: #d71920;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 8px;
+}
+
+.resend-otp:hover {
+    text-decoration: underline;
+}
+
+.resend-otp:disabled {
+    color: #999;
+
+    cursor: not-allowed;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .otp-box {
+        width: calc(100% - 30px);
+
+        padding: 35px 22px;
+    }
+
+    .otp-box h2 {
+        font-size: 23px;
+    }
+
+    #otpInput {
+        height: 54px;
+
+        font-size: 22px;
+
+        letter-spacing: 6px;
+    }
+
+}

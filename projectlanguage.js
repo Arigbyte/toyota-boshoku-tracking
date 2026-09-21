@@ -271,42 +271,32 @@ function changeLanguage(lang) {
       element.placeholder = translations[lang][key];
     }
   });
+// ==============================
+// TOMBOL BAHASA
+// ==============================
 
-  // ==============================
-  // TOMBOL BAHASA
-  // ==============================
-
- const currentLanguage =
+const currentLanguage =
     document.getElementById("currentLanguage");
 
-const currentFlag =
-    document.getElementById("currentFlag");
+if (currentLanguage) {
 
+    if (lang === "id") {
 
-if (lang === "id") {
+        currentLanguage.textContent = "ID";
 
-    currentLanguage.textContent = "ID";
+    }
 
-    currentFlag.src = "c:\Users\arigs\Downloads\ChatGPT Image Sep 20, 2026, 03_44_57 PM.png";
-    currentFlag.alt = "Indonesia";
+    else if (lang === "th") {
 
-}
+        currentLanguage.textContent = "TH";
 
-else if (lang === "th") {
+    }
 
-    currentLanguage.textContent = "TH";
+    else if (lang === "ja") {
 
-    currentFlag.src = "c:\Users\arigs\Downloads\Flag Of Thailand Pin Badges PNG.jpg";
-    currentFlag.alt = "Thailand";
+        currentLanguage.textContent = "JP";
 
-}
-
-else if (lang === "ja") {
-
-    currentLanguage.textContent = "JP";
-
-    currentFlag.src = "images/japan.png";
-    currentFlag.alt = "Japan";
+    }
 
 }
 
