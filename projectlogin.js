@@ -265,18 +265,38 @@ if (verifyOtpBtn) {
 
       console.log("OTP berhasil diverifikasi:", data);
 
-      // Simpan status login email
-      if (data?.user) {
-        localStorage.setItem(
-          "emailUser",
-          JSON.stringify({
-            id: data.user.id,
-            email: data.user.email,
-          }),
-        );
+     /* =========================================
+   SIMPAN DATA LOGIN EMAIL
+========================================= */
 
-        localStorage.setItem("loginMethod", "email");
-      }
+if (data?.user) {
+
+  /* Simpan data user */
+  localStorage.setItem(
+    "emailUser",
+    JSON.stringify({
+      id: data.user.id,
+      email: data.user.email,
+    })
+  );
+
+  /* 
+     PENTING:
+     Halaman pilih-role.html membaca
+     localStorage dengan nama "loginEmail"
+  */
+  localStorage.setItem(
+    "loginEmail",
+    data.user.email || currentOtpEmail
+  );
+
+  /* Simpan metode login */
+  localStorage.setItem(
+    "loginMethod",
+    "email"
+  );
+
+}
 
       if (otpMessage) {
         otpMessage.textContent = "Login berhasil!";
